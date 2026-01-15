@@ -16,32 +16,8 @@ find_package(catkin REQUIRED COMPONENTS
   robokudo_msgs
   actionlib
   grasping_pipeline_msgs
+  object_detector_msgs
 )
-
-
-# Generate messages in the 'msg' folder
-# add_message_files(
-#   FILES
-# )
-
-# Generate services in the 'srv' folder
-add_service_files(
-  FILES
-  TablePlaneExtractor.srv
-  GetPCOfObjectsOnTable.srv
-  GetBBOfObjectsOnTable.srv
-)
-
-# Generate added messages and services with any dependencies listed here
-generate_messages(
-  DEPENDENCIES
-  std_msgs
-  geometry_msgs
-  sensor_msgs
-  vision_msgs
-  grasping_pipeline_msgs
-)
-
 
 catkin_package()
 include_directories()

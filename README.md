@@ -7,6 +7,7 @@
 - [requirements.txt](requirements.txt)
 - [package.xml](package.xml)
 - [CMakeLists.txt](CMakeLists.txt)
+- [grasping_pipeline_msgs](https://github.com/v4r-tuwien/grasping_pipeline_msgs)
 
 ## Services
 

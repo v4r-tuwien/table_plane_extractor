@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-from table_plane_extractor.srv import TablePlaneExtractor
+from grasping_pipeline_msgs.srv import TablePlaneExtractor
 import rospy
 from sensor_msgs.msg import PointCloud2
 

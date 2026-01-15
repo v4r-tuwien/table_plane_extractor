@@ -1,4 +1,0 @@
-sensor_msgs/PointCloud2 point_cloud
----
-grasping_pipeline_msgs/Plane[] planes
-vision_msgs/BoundingBox3DArray plane_bounding_boxes

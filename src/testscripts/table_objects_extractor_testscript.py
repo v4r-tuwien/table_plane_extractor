@@ -2,7 +2,7 @@
 import rospy
 from open3d import open3d as o3d
 from open3d_ros_helper import open3d_ros_helper as orh
-from table_plane_extractor.srv import GetBBOfObjectsOnTable, GetPCOfObjectsOnTable
+from grasping_pipeline_msgs.srv import GetBBOfObjectsOnTable, GetPCOfObjectsOnTable
 from sensor_msgs.msg import PointCloud2
 
 # result_type = 'bb'

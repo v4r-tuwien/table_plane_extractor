@@ -6,7 +6,7 @@ import copy
 from v4r_util.tf2 import TF2Wrapper
 from v4r_util.conversions import o3d_bb_list_to_ros_bb_arr
 from v4r_util.rviz_visualization.rviz_visualizer import RvizVisualizer
-from table_plane_extractor.srv import GetBBOfObjectsOnTable, GetBBOfObjectsOnTableResponse, GetPCOfObjectsOnTable, GetPCOfObjectsOnTableResponse
+from grasping_pipeline_msgs.srv import GetBBOfObjectsOnTable, GetBBOfObjectsOnTableResponse, GetPCOfObjectsOnTable, GetPCOfObjectsOnTableResponse
 from extractor_of_table_planes import extract_table_planes_from_pcd
 from extractor_of_table_objects import extract_objects_from_tableplane
 
