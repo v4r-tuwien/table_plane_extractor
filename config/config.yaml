@@ -1,24 +1,16 @@
-table_plane_extractor:
-  downsample_vox_size: 0.01                     # voxel size (in m) for downsampling
-  max_angle_deg: 5                              # maximum allowed angle (in degree) to still be considered horizontal
-  min_cluster_size: 200                         # min amount of points needed to form an object
-  cluster_dbscan_eps: 0.15                       # eps for dbscan clustering algorithm (in m)
-  plane_segmentation_distance_threshold: 0.01   # Max distance (in m) a point can be from the plane model
-                                                # and still be considered an inlier.
-  base_frame: map                               # frame which is used for all calculations, which means
-                                                # that the planes returned are horizontal in this frame 
-                                                # -> should be a frame with z pointing upwards for table extractions
-  z_min: 0.2                                    # min allowed z_coordinate (in m) for planes (used for filtering floor)
-  enable_rviz_visualization: True               # enables visualization of bounding boxes in rviz (topic: objectsOnTableVisualizer)
-  min_pre_cluster_size: 150                     # min amount of points needed in a cluster to be considered for plane detection
-  num_iter_ransac: 1000                          # number of iterations for ransac plane detection
-
-table_objects_extractor:
-  cluster_dbscan_eps: 0.01                      # density parameter (in m) that is used to find neighbouring points 
-                                                # for object segmentation
-  min_points: 50                                # minimum number of points to form a valid object-cluster
-  min_volume: 0.0001                            # minimum volume bounding box needs to have to not be discarded (in m^3)
-  max_obj_height: 0.4                           # maximum height of object (in m)
-
-table_objects_extractor_as:
-  cam_info_topic: /hsrb/head_rgbd_sensor/depth_registered/camera_info
+/**:
+        ros__parameters:
+            table_plane_extractor_server:
+                    downsample_vox_size :  0.01                     # voxel size (in m) for downsampling
+                    max_angle_deg : 5                              # maximum allowed angle (in degree) to still be considered horizontal
+                    min_cluster_size : 200                         # min amount of points needed to form an object
+                    cluster_dbscan_eps : 0.15                       # eps for dbscan clustering algorithm (in m)
+                    plane_segmentation_distance_threshold : 0.01   # Max distance (in m) a point can be from the plane model
+                                                        # and still be considered an inlier.
+                    base_frame : map                               # frame which is used for all calculations, which means
+                                                        # that the planes returned are horizontal in this frame 
+                                                        # -> should be a frame with z pointing upwards for table extractions
+                    z_min : 0.2                                   # min allowed z_coordinate (in m) for planes (used for filtering floor)
+                    enable_rviz_visualization : True               # enables visualization of bounding boxes in rviz (topic: objectsOnTableVisualizer)
+                    min_pre_cluster_size : 150                     # min amount of points needed in a cluster to be considered for plane detection
+                    num_iter_ransac : 1000                          # number of iterations for ransac plane detection

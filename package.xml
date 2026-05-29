@@ -1,34 +1,18 @@
 <?xml version="1.0"?>
-<package format="2">
+<package format="3">
   <name>table_plane_extractor</name>
   <version>0.0.0</version>
-  <description>Service for horizontal table plane extraction. Service for getting objects that are placed on the table plane.</description>
-
+  <description>Service for horizontal table plane extraction. Service for getting objects on the table plane.</description>
   <maintainer email="v4r@todo.todo">v4r</maintainer>
+  <license>Apache-2.0</license>
 
-  <license>TODO</license>
+  <!-- Buildtool -->
+  <buildtool_depend>ament_python</buildtool_depend>
 
-  <build_depend>message_generation</build_depend>
-  <exec_depend>message_runtime</exec_depend>
-  <buildtool_depend>catkin</buildtool_depend>
-  <build_depend>roscpp</build_depend>
-  <build_depend>rospy</build_depend>
-  <build_depend>std_msgs</build_depend>
-  <build_depend>geometry_msgs</build_depend>
-  <build_export_depend>roscpp</build_export_depend>
-  <build_export_depend>rospy</build_export_depend>
-  <build_export_depend>std_msgs</build_export_depend>
-  <build_export_depend>geometry_msgs</build_export_depend>
-  <exec_depend>roscpp</exec_depend>
-  <exec_depend>rospy</exec_depend>
-  <exec_depend>std_msgs</exec_depend>
-  <depend>vision_msgs</depend>
-  <depend>tf2_ros</depend>
-  <depend>tf2_sensor_msgs</depend>
-  <depend>visualization_msgs</depend>
-  <depend>v4r_util</depend>
-  <depend>robokudo_msgs</depend>
-  <depend>actionlib</depend>
-  <depend>grasping_pipeline_msgs</depend>
-
+  <!-- ROS2 runtime dependencies -->
+  <depend>rclpy</depend>
+  
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
 </package>
