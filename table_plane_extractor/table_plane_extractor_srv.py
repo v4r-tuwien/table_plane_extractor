@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-from table_plane_extractor_msgs.srv import TablePlaneExtractor
+from grasping_pipeline_msgs.srv import TablePlaneExtractor
 from table_plane_extractor.extractor_of_table_planes import extract_table_planes_from_pcd
 from grasping_pipeline_msgs.msg import Plane
 import rclpy
