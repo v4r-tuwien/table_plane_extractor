@@ -75,9 +75,11 @@ class GetObjectsOnTableAS(Node):
             return GenericImgProcAnnotator.Result()
         
         # Wait for camera info
-        start_time = self.get_clock().now()
-        while self.cam_info is None and (self.get_clock().now() - start_time).nanoseconds < 5e9:  # 5 seconds
+        timeout_cnt = 0
+        while self.cam_info is None and timeout_cnt < 50:  # 5 seconds
             rclpy.spin_once(self, timeout_sec=0.1)
+            timeout_cnt += 1
+            
         if self.cam_info is None:
             self.get_logger().error("No camera info received")
             goal_handle.abort()
